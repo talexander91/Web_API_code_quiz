@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Quiz</title>
+  <link rel="reset" href="./reset.css">
+  <link rel="stylesheet" href="./stylesheet.css">
+</head>
+
+<body>
+  <nav>
+    <a id="view">View HighScores</a>
+    <p id="time">Time: <span id="timerText"></span></p>
+  </nav>
+
+  <main> 
+    <div id="homePhase">
+      <h1>Web Development Quiz</h1>
+      <p>Answer the following programming related questions within the time limit. Record your high scores to improve.
+        Incorrect answers will subtract from your score and time limit.</p>
+      <button id="startButton">Start</button>
+    </div>
+
+    <div id="questionPhase" class="leftSided">
+      <h2>Question <span id="questionNumber">1</span>: <span id="questionContent">dummy</span></h2>
+      <ol class="questions">
+        <li><button id="1" onClick="answerClick(this.id)">option 1</button></li>
+        <li><button id="2" onClick="answerClick(this.id)">option 2</button></li>
+        <li><button id="3" onClick="answerClick(this.id)">option 3</button></li>
+        <li><button id="4" onClick="answerClick(this.id)">option 4</button></li>
+      </ol>
+      <p id="answerStatus"></p>
+    </div>
+
+    <div id="finishPhase" class="leftSided">
+      <h3>Finished!</h3>
+      <p>Score: <span id="score">0</span></p>
+      <p>Enter Name: <input type="text" id="name" value="Input your name"> <button id="submit">Submit</button></p>
+    </div>
+
+    <div id="highScorePhase" class="leftSided">
+      <h2>High Scores</h2>
+      <ol id="scoreBoard"></ol>
+      <button id="back">Go back</button>
+      <button id="clear">Clear</button>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
+</html>
